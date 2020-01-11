@@ -48,49 +48,28 @@ class LeaveController extends Controller
      */
 
     public function index()
-
     {
-
         $leaves = Leave::latest()->paginate(5);
-
         return view('leaves.index',compact('leaves'))
-
             ->with('i', (request()->input('page', 1) - 1) * 5);
-
     }
 
-
     /**
-
      * Show the form for creating a new resource.
-
      *
-
      * @return \Illuminate\Http\Response
-
      */
-
     public function create()
-
     {
-
         return view('leaves.create');
-
     }
 
-
     /**
-
      * Store a newly created resource in storage.
-
      *
-
      * @param  \Illuminate\Http\Request  $request
-
      * @return \Illuminate\Http\Response
-
      */
-
     public function store(Request $request)
 
     {
