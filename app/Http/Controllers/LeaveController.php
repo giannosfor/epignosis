@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Leave;
 use Illuminate\Http\Request;
 
 class LeaveController extends Controller
