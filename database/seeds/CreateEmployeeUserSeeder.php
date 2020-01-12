@@ -23,8 +23,12 @@ class CreateEmployeeUserSeeder extends Seeder
         ]);
   
         $role = Role::create(['name' => 'Employee']);
-        $permissions = Permission::pluck('id','id')->all();
-        $role->syncPermissions($permissions);
+
+        $role->givePermissionTo('leave-list');
+        $role->givePermissionTo('leave-create');
+        $role->givePermissionTo('leave-edit');
+        $role->givePermissionTo('leave-delete');
+
         $user->assignRole([$role->id]);
     }
 
