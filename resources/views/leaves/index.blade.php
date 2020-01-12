@@ -34,40 +34,23 @@
 	        <td>{{ $leave->detail }}</td>
 	        <td>
                 <form action="{{ route('leaves.destroy',$leave->id) }}" method="POST">
-
                     <a class="btn btn-info" href="{{ route('leaves.show',$leave->id) }}">Show</a>
-
                     @can('leave-edit')
-
                     <a class="btn btn-primary" href="{{ route('leaves.edit',$leave->id) }}">Edit</a>
-
                     @endcan
-
 
                     @csrf
-
                     @method('DELETE')
-
                     @can('leave-delete')
-
                     <button type="submit" class="btn btn-danger">Delete</button>
-
                     @endcan
-
                 </form>
-
 	        </td>
-
 	    </tr>
-
 	    @endforeach
-
     </table>
-
 
     {!! $leaves->links() !!}
 
-
 <p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
-
 @endsection
