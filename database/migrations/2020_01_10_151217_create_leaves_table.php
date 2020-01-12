@@ -20,7 +20,7 @@ class CreateLeavesTable extends Migration
             $table->dateTime('submit');
             $table->date('vacation_start');
             $table->date('vacation_end');
-            $table->enum('status', ['pending','approved','rejected']);
+            $table->enum('status', ['pending','approved','rejected'])->defailt('pending');
             $table->timestamps();
 
             $table->foreign('user_id')

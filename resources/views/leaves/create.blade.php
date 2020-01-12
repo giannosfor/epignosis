@@ -28,21 +28,21 @@
          <div class="row">
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
-		            <strong>Begin:</strong>
-		            <input type="text" name="name" class="form-control" placeholder="Begin">
+		            <strong>Start:</strong>
+		            <input type="text" name="vacation_start" placeholder="dd/mm/yy">
+                    <strong>End:</strong>
+                    <input type="text" name="vacation_end" placeholder="dd/mm/yy">
 		        </div>
 		    </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>End:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="End">
                 </div>
             </div>
 
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
 		            <strong>Reason:</strong>
-		            <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
+		            <textarea class="form-control" style="height:150px" name="reason" placeholder="Type the why you request this leave."></textarea>
 		        </div>
 		    </div>
 		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">

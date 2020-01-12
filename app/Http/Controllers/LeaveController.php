@@ -51,8 +51,9 @@ class LeaveController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'name' => 'required',
-            'detail' => 'required',
+            'validate_start' => 'required',
+            'validate_end' => 'required',
+            'reason' => 'required',
         ]);
 
         Leave::create($request->all());

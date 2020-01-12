@@ -11,6 +11,6 @@ class Leave extends Model
      * @var array
      */
     protected $fillable = [
-        'submit', 'detail','reason'
+        'submit', 'vacation_start', 'vacation_end', 'reason'
     ];
 }
