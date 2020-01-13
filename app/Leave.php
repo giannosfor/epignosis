@@ -5,12 +5,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Leave extends Model
 {
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
     /**
      * The attributes that are mass assignable.
      *	
      * @var array
      */
     protected $fillable = [
-        'submit', 'vacation_start', 'vacation_end', 'reason'
+        'vacation_start',
+        'vacation_end',
+        'reason',
     ];
 }

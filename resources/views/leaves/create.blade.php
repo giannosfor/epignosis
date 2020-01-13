@@ -29,9 +29,9 @@
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
 		            <strong>Start:</strong>
-		            <input type="text" name="vacation_start" placeholder="dd/mm/yy">
+		            <input type="date" name="vacation_start" placeholder="dd/mm/yy">
                     <strong>End:</strong>
-                    <input type="text" name="vacation_end" placeholder="dd/mm/yy">
+                    <input type="date" name="vacation_end" placeholder="dd/mm/yy">
 		        </div>
 		    </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

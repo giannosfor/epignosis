@@ -17,7 +17,7 @@ class CreateEmployeeUserSeeder extends Seeder
         $user = User::create([
             'firstname' => 'Christina', 
             'lastname' => 'Gialleli', 
-            'email' => 'cgialleli@epignosis.com',
+            'email' => 'cgialleli@epignosishq.com',
             'password' => bcrypt('epignosis')
 
         ]);

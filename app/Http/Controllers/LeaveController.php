@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Leave;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LeaveController extends Controller
 { 
@@ -50,13 +51,19 @@ class LeaveController extends Controller
      */
     public function store(Request $request)
     {
+        /**
+            1. Date format
+            2. Extra validation rule. must be later date.
+        **/
         request()->validate([
-            'validate_start' => 'required',
-            'validate_end' => 'required',
+            'vacation_start' => 'required',
+            'vacation_end' => 'required',
             'reason' => 'required',
         ]);
 
-        Leave::create($request->all());
+        $leave = new Leave($request->all());
+        \Auth::user()->leaves()->save($leave);
+
         return redirect()->route('leaves.index')
                         ->with('success','Leave created successfully.');
     }

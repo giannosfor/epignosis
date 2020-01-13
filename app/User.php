@@ -12,6 +12,11 @@ class User extends Authenticatable
     use Notifiable;
     use HasRoles; // <--
 
+    public function leaves()
+    {
+        return $this->hasMany('App\Leave');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

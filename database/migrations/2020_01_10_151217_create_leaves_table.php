@@ -17,7 +17,7 @@ class CreateLeavesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->text('reason');
-            $table->dateTime('submit');
+            $table->dateTime('submit')->useCurrent();
             $table->date('vacation_start');
             $table->date('vacation_end');
             $table->enum('status', ['pending','approved','rejected'])->defailt('pending');

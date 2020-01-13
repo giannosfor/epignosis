@@ -23,15 +23,19 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Name</th>
-            <th>Details</th>
+            <th>Submitted</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
             <th width="280px">Action</th>
         </tr>
 	    @foreach ($leaves as $leave)
 	    <tr>
 	        <td>{{ ++$i }}</td>
-	        <td>{{ $leave->name }}</td>
-	        <td>{{ $leave->detail }}</td>
+	        <td>{{ $leave->submit }}</td>
+	        <td>{{ $leave->vacation_start }}</td>
+            <td>{{ $leave->vacation_end }}</td>
+            <td>{{ $leave->status }}</td>   
 	        <td>
                 <form action="{{ route('leaves.destroy',$leave->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('leaves.show',$leave->id) }}">Show</a>
