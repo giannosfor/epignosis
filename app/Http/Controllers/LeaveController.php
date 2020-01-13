@@ -78,9 +78,20 @@ class LeaveController extends Controller
      * @param  \App\Leave  $leave
      * @return \Illuminate\Http\Response
      */
-    public function show(Leave $leave)
+    // public function show(Leave $leave)
+    // {
+    //     return view('leaves.show',compact('leave'));
+    // }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Leave  $leave
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        return view('leaves.show',compact('leave'));
+        return view('leaves.show',['leave' => Leave::findOrFail($id)]);
     }
 
 
@@ -90,9 +101,9 @@ class LeaveController extends Controller
      * @param  \App\Leave  $leave
      * @return \Illuminate\Http\Response
      */
-    public function edit(Leave $leave)
+    public function edit($id)
     {
-        return view('leaves.edit',compact('leave'));
+        return view('leaves.edit',['leave' => Leave::findOrFail($id)]);
     }
 
 

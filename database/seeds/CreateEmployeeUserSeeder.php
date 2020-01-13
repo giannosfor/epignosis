@@ -26,9 +26,6 @@ class CreateEmployeeUserSeeder extends Seeder
 
         $role->givePermissionTo('leave-list');
         $role->givePermissionTo('leave-create');
-        $role->givePermissionTo('leave-edit');
-        $role->givePermissionTo('leave-delete');
-
         $user->assignRole([$role->id]);
     }
 

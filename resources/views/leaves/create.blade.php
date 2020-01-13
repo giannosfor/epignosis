@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Leave</h2>
+                <h2>Submit Leave</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('leaves.index') }}"> Back</a>
@@ -34,11 +34,6 @@
                     <input type="date" name="vacation_end" placeholder="dd/mm/yy">
 		        </div>
 		    </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                </div>
-            </div>
-
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
 		            <strong>Reason:</strong>
