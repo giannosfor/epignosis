@@ -28,7 +28,11 @@ class LeaveController extends Controller
      */
     public function index()
     {
-        $leaves = Leave::latest()->paginate(5);
+        // BR 2 , BR 1
+        if ( \Auth::user()->hasRole('Admin') ) $leaves = Leave::latest()->paginate(5);
+        else if ( \Auth::user()->hasRole('Employee') ) $leaves = \Auth::user()->leaves()->paginate(5);
+        else throw new Exception("Error Processing Request", 1);
+        
         return view('leaves.index',compact('leaves'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -56,8 +60,8 @@ class LeaveController extends Controller
             2. Extra validation rule. must be later date.
         **/
         request()->validate([
-            'vacation_start' => 'required',
-            'vacation_end' => 'required',
+            'vacation_start' => 'required|date',
+            'vacation_end' => 'required|date|after:vacation_start',
             'reason' => 'required',
         ]);
 
