@@ -20,5 +20,6 @@ class Leave extends Model
         'vacation_start',
         'vacation_end',
         'reason',
+        'status',
     ];
 }

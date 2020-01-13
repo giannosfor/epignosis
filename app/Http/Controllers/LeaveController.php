@@ -114,13 +114,16 @@ class LeaveController extends Controller
      * @param  \App\Leave  $leave
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Leave $leave)
+    public function update(Request $request, $id)
     {
-         request()->validate([
-            'name' => 'required',
-            'detail' => 'required',
+        request()->validate([
+            'vacation_start' => 'required|date',
+            'vacation_end' => 'required|date|after:vacation_start',
+            'reason' => 'required',
+            'status' => 'required|in:pending,approved,rejected'
         ]);
 
+        $leave = Leave::findOrFail($id);
         $leave->update($request->all());
         return redirect()->route('leaves.index')
                         ->with('success','Leave updated successfully');
