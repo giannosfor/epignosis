@@ -16,9 +16,9 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Start:</strong>
-                <input type="date" name="vacation_start" value="{{ $leave->vacation_start }}" placeholder="dd/mm/yy">
+                <input readonly type="date" name="vacation_start" value="{{ $leave->vacation_start }}" placeholder="dd/mm/yy">
                 <strong>End:</strong>
-                <input type="date" name="vacation_end" value="{{ $leave->vacation_end }}" placeholder="dd/mm/yy">
+                <input readonly type="date" name="vacation_end" value="{{ $leave->vacation_end }}" placeholder="dd/mm/yy">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -29,7 +29,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Reason:</strong>
-                <textarea class="form-control" style="height:150px" name="reason">{{ $leave->reason }}</textarea>
+                <textarea readonly class="form-control" style="height:150px" name="reason">{{ $leave->reason }}</textarea>
             </div>
         </div>
     </div>

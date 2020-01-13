@@ -8,7 +8,7 @@
             </div>
             <div class="pull-right">
                 @can('leave-create')
-                <a class="btn btn-success" href="{{ route('leaves.create') }}"> Create New Leave</a>
+                <a class="btn btn-success" href="{{ route('leaves.create') }}"> Submit Request</a>
                 @endcan
             </div>
         </div>
