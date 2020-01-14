@@ -2,4 +2,4 @@
 
 Assessment assignment
 
-For more information regarding the project please visit the Wiki.
+For more information please visit the Wiki.
