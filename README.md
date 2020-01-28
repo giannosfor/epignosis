@@ -2,4 +2,5 @@
 
 Assessment assignment
 
-For more information please visit Wiki.
+For more information visit Wiki.
+https://github.com/giannosfor/epignosis/wiki
